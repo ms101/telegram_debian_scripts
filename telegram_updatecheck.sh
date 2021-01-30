@@ -2,7 +2,7 @@
 DATE=`date '+%Y-%m-%d %H:%M:%S'`
 
 apt-get update -qq
-AVAIL=`apt-get --just-print upgrade 2>&1 | perl -ne 'if (/Inst\s([\w,\-,\d,\.,~,:,\+]+)\s\[([\w,\-,\d,\.,~,:,\+]+)\]\s\(([\w,\-,\d,\.,~,:,\+]+)\)? /i) {print "$1 $2 -> $3\n"}'`
+AVAIL=`apt-get --just-print upgrade 2>&1 | perl -ne 'if (/Inst\s([\w,\-,\d,\.,~,:,\+]+)\s\[([\w,\-,\d,\.,~,:,\+]+)\]\s\(([\w,\-,\d,\.,~,:,\+]+)\)? /i) {print "$1_$2_$3%0A"}'`
 
 if [ ! -z "$AVAIL" ]
 then
