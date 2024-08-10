@@ -10,6 +10,10 @@ Sends a notification if updates are available with details on packages that can 
 
 Sends a notification if a reboot is required, e.g. after an update
 
+## telegram_ufw.sh
+
+Report any accessible port other than 22
+
 ## telegram_alertonboot.sh
 
 Sends a notification after the server rebooted
